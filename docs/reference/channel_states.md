@@ -1,6 +1,6 @@
 ### NAME
 
-> CAN API V3 channel states
+> CAN API V3 channel availablity states
 
 ### SYNOPSIS
 
@@ -46,6 +46,7 @@ public enum State: Int32 {
 ### DESCRIPTION
 
 CAN API V3 provides a function (**C**) respectively a method (**C++**/**Swift**) to test the availability of a CAN channel.
+The following [availability states](#state_defines) are defined:
 
 <a id="state_occupied"></a>
 State **+1 (*CANBRD_OCCUPIED*)** indicates that the requested CAN channel is available, but occupied.

@@ -1,6 +1,6 @@
 ### NAME
 
-> *can_status_t* - 8-bit wide status register of a CAN channel 
+> *can_status_t* - status register of a CAN channel 
 
 ### SYNOPSIS
 
@@ -52,18 +52,18 @@ public struct Status {
 
 ### DESCRIPTION
 
-The 8-bit wide [status register](/reference/status_register#can_status_t) of a CAN channel can be read by *can_status()* (C) respectively *GetStatus()* (C++) or by reading the Swift property *status*.
+The 8-bit wide [status register](#can_status_t) of a CAN channel can be read by [*can_status()*](/reference/can_status#can_status) (C) respectively [*GetStatus()*](/reference/can_status#getstatus) (C++) or by reading the Swift property [*status*](/reference/get_status#var_status).
 
 <a id="status_bit_can_stopped"></a>
 **Status bit 7 (*RESET*)** indicates whether the CAN controller in reset mode (aka INIT state) or running (bus-on).
 The bit is set if the CAN controller has not been started.
-The bit is cleared if the CAN controller has successfully been started by *can_start()* respectively *StartController()*.
+The bit is cleared if the CAN controller has successfully been started by [*can_start()*](/reference/can_start#can_start) respectively [*StartController()*](/reference/can_start#startcontroller).
 
 <a id="status_bit_bus_off"></a>
 **Status bit 6 (*BOFF*)** indicates whether the CAN controller is in bus-off state.
 The bit is set if the CAN controller has detected a bus-off condition.
-The bit is cleared if the CAN controller has successfully been (re-)started by *can_start()* respectively *StartController()*.
-It depends on the CAN driver respectively the CAN controller firmware if this bit is set while the CAN controller in reset mode.
+The bit is cleared if the CAN controller has successfully been (re-)started by [*can_start()*](/reference/can_start#can_start) respectively [*StartController()*](/reference/can_start#startcontroller).
+It depends on the CAN driver respectively the CAN controller firmware if this bit is set while the CAN controller in reset mode (aka INIT mode).
 
 <a id="status_bit_warning_level"></a>
 **Status bit 5 (*EWRN*)** indicates whether the CAN controller has reached its warning level (e.g. error-passive).
@@ -77,25 +77,23 @@ It depends on the CAN driver respectively the CAN controller firmware how the pr
 
 <a id="status_bit_transmitter_busy"></a>
 **Status bit 3 (*TX_BUSY*)** indicates that the CAN controller is not able to send a requested transmit message.
-The bit is set if a call to *can_write()* respectively *WriteMessage()* failed with error code CANERR_TX_BUSY. Otherwise, the bit is cleared.
-The error code [CANERR_TX_BUSY](/reference/error_codes#error_tx_busy) will be returned if the CAN controller has not acknowledged the successful transmission of the CAN message.
+The bit is set if a call to [*can_write()*](/reference/can_write#can_write) respectively [*WriteMessage()*](/reference/can_write#writemessage) failed with error code [CANERR_TX_BUSY](/reference/error_codes#error_tx_busy) . Otherwise, the bit is cleared.
 It depends on the CAN driver respectively the CAN controller firmware if transmit messages are acknowledged or not.
 
 <a id="status_bit_receiver_empty"></a>
 **Status bit 2 (*RX_EMPTY*)** indicates that the receive queue is empty and the CAN controller has not received any new CAN message.
-The bit is set if a call to *can_read()* respectively *ReadMessage()* failed with error code CANERR_RX_EMPTY. Otherwise, the bit is cleared.
-The error code [CANERR_RX_EMPTY](/reference/error_codes#error_rx_empty) will be returned if the receive queue is empty and the CAN controller has not received any new CAN message.
+The bit is set if a call to [*can_read()*](/reference/can_read#can_read) respectively [*ReadMessage()*](/reference/can_read#readmessage) failed with error code [CANERR_RX_EMPTY](/reference/error_codes#error_rx_empty). Otherwise, the bit is cleared.
 
 <a id="status_bit_message_lost"></a>
 **Status bit 1 (*MSG_LST*)** indicates that a received CAN message has been lost.
 The bit is set if at least one received CAN message has been overwritten in the CAN controller before it has been stored in the receive queue.
-The bit is cleared if the CAN controller has successfully been (re-)started by *can_start()* respectively *StartController()*.
+The bit is cleared if the CAN controller has successfully been (re-)started by [*can_start()*](/reference/can_start#can_start) respectively [*StartController()*](/reference/can_start#startcontroller).
 It depends on the CAN driver respectively the CAN controller firmware how message lost events are handled.
 
 <a id="status_bit_queue_overrun"></a>
 **Status bit 0 (*QUE_OVR*)** indicates that the receive queue has overflowed.
 The bit is set if the receive queue is full while a new CAN message has been received by the CAN controller.
-The bit is cleared if the CAN controller has successfully been (re-)started by *can_start()* respectively *StartController()*.
+The bit is cleared if the CAN controller has successfully been (re-)started by [*can_start()*](/reference/can_start#can_start) respectively [*StartController()*](/reference/can_start#startcontroller).
 It depends on the CAN driver how queue overrun events are handled.
 
 ### SEE ALSO

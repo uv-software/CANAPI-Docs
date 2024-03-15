@@ -1,6 +1,6 @@
 ### NAME
 
-> *can_bitrate* - get the CAN bit-rate settings from the CAN controller of a CAN channel
+> *can_bitrate* - get the CAN bit-rate settings of a CAN channel
 
 ### SYNOPSIS
 
@@ -28,35 +28,35 @@ public var speed: Speed?
 
 ### DESCRIPTION
 
-The function [can_bitrate()](#can_bitrate) retrieves the bit-rate and data transmission speed (bus speed) of the CAN channel given by the *handle* argument.
+The function [can_bitrate()](#can_bitrate) retrieves the bit-rate settings and data transmission speed (bus speed in [bit/s]) of the CAN channel given by the *handle* argument.
 
 Upon successful completion, the current [bit-rate](/reference/bitrate_settings#can_bitrate_t) is stored in the variable pointed to by *bitrate*
 and the current [bus speed](/reference/bitrate_settings#can_speed_t) in the variable pointed to by *speed*.
 Both parameters are optional, that means NULL pointers can be passed as arguments. 
 
 The method [GetBitrate()](#getbitrate) retrieves the bit-rate of a CAN channel
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of *InitializeChannel()* from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
 
-The method [GetBusSpeed()](#getbusspeed) retrieves the data transmission speed (bus speed) of a CAN channel
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of *InitializeChannel()* from that instance.
+The method [GetBusSpeed()](#getbusspeed) retrieves the data transmission speed of a CAN channel
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
 
 The Swift [bitrate](#var_bitrate) property contains the current [bit-rate](/reference/bitrate_settings#struct_bitrate) read from the associated CAN channel.
 It is a read-only property.
-The class instance from which the property is read must be associated with a CAN channel by a previous successful call of *InitializeChannel()* from that instance.
+The class instance from which the property is read must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
 
 The Swift [speed](#var_speed) property contains the current [bus speed](reference/bitrate_settings#struct_speed) read from the associated CAN channel.
 It is a read-only property.
-The class instance from which the property is read must be associated with a CAN channel by a previous successful call of *InitializeChannel()* from that instance.
+The class instance from which the property is read must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
-Upon successful completion, the C function and the C++ method return 0. On error, a negative value will be returned (see [errors](#errors)).
+Upon successful completion, the C function and the C++ method will return 0. On error, a negative value will be returned (see [errors](#errors)).
 
 Upon successful completion, the Swift property contains the current bit-rate respectively bus speed. On error, it will be `Nil`.
 
 ### ERRORS
 
-Under the following conditions, [can_bitrate()](#can_bitrate) respectively [GetBitrate()](#getbitrate) and [GetBusSpeed()](#getbusspeed) fail and return the appropriated error code:
+Under the following conditions, [can_bitrate()](#can_bitrate) respectively [GetBitrate()](#getbitrate) and [GetBusSpeed()](#getbusspeed) will fail and return the appropriated error code:
 
 [CANERR_NOTINIT](/reference/error_codes#error_notinit)   - channel not initialized \
 [CANERR_HANDLE](/reference/error_codes#error_handle)     - invalid channel handle \

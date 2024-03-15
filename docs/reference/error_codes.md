@@ -134,7 +134,7 @@ and codes less or equal than -10000 are reserved for OS-specific error codes
 (add 10000 to get the reported OS error code, e.g. `errno`).
 
 <a id="error_noerror"></a>
-Error code **0** (*CANERR_NOERROR*) indicates the successful execution of a function (**C**) respectively method (**C++**).
+Error code **0** (*CANERR_NOERROR*) indicates the successful completion of a function (**C**) respectively method (**C++**).
 
 <a id="error_boff"></a>
 Error code **-1** (*CANERR_BOFF*)[^1] indicates that the CAN controller has entered the bus-off error state; cf. status bit [BOFF](/reference/status_register#status_bit_bus_off).

@@ -37,14 +37,11 @@
 #define CANPROP_GET_TRM_QUEUE_SIZE  30U
 #define CANPROP_GET_TRM_QUEUE_HIGH  31U
 #define CANPROP_GET_TRM_QUEUE_OVFL  32U
-#define CANPROP_GET_FLT_11BIT_CODE  40U
-#define CANPROP_GET_FLT_11BIT_MASK  41U
-#define CANPROP_GET_FLT_29BIT_CODE  42U
-#define CANPROP_GET_FLT_29BIT_MASK  43U
-#define CANPROP_SET_FLT_11BIT_CODE  44U
-#define CANPROP_SET_FLT_11BIT_MASK  45U
-#define CANPROP_SET_FLT_29BIT_CODE  46U
-#define CANPROP_SET_FLT_29BIT_MASK  47U
+#define CANPROP_GET_FILTER_11BIT    40U
+#define CANPROP_GET_FILTER_29BIT    41U
+#define CANPROP_SET_FILTER_11BIT    42U
+#define CANPROP_SET_FILTER_29BIT    43U
+#define CANPROP_SET_FILTER_RESET    44U
 #if (OPTION_CANAPI_LIBRARY != 0)
 /* - -  build-in bit-rate conversion  */
 #define CANPROP_GET_BTR_INDEX       64U
@@ -182,21 +179,15 @@ Property **GET_TRM_QUEUE_HIGH** : maximum number of message the transmit queue h
 
 Property **GET_TRM_QUEUE_OVFL** : overflow counter of the transmit queue (`uint64_t`)
 
-Property **GET_FLT_11BIT_CODE** : acceptance filter code of 11-bit identifier (`int32_t`)
+Property **CANPROP_GET_FILTER_11BIT** : acceptance filter code and mask for 11-bit identifier (uint64_t)
 
-Property **GET_FLT_11BIT_MASK** : acceptance filter mask of 11-bit identifier (`int32_t`)
+Property **CANPROP_GET_FILTER_29BIT** : acceptance filter code and mask for 29-bit identifier (uint64_t)
 
-Property **GET_FLT_29BIT_CODE** : acceptance filter code of 29-bit identifier (`int32_t`)
+Property **CANPROP_SET_FILTER_11BIT** : set value for acceptance filter code and mask for 11-bit identifier (uint64_t)
 
-Property **GET_FLT_29BIT_MASK** : acceptance filter mask of 29-bit identifier (`int32_t`)
+Property **CANPROP_SET_FILTER_29BIT** : set value for acceptance filter code and mask for 29-bit identifier (uint64_t)
 
-Property **SET_FLT_11BIT_CODE** : set value for acceptance filter code of 11-bit identifier (`int32_t`)
-
-Property **SET_FLT_11BIT_MASK** : set value for acceptance filter mask of 11-bit identifier (`int32_t`)
-
-Property **SET_FLT_29BIT_CODE** : set value for acceptance filter code of 29-bit identifier (`int32_t`)
-
-Property **SET_FLT_29BIT_MASK** : set value for acceptance filter mask of 29-bit identifier (`int32_t`)
+Property **CANPROP_SET_FILTER_RESET** : reset acceptance filter code and mask to default values (NULL)
 
 Property **GET_BTR_INDEX** : bit-rate as CiA index (`int32_t`)
 
