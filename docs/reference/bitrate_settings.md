@@ -111,12 +111,12 @@ public struct Speed {
 ### DESCRIPTION
 
 CAN API V3 provides the data type [can_bitrate_t](#can_bitrate_t) (**C/C++**) respectively [struct Bitrate](#struct_bitrate) (**Swift**) for adjusting the bit-rate of the CAN controller associated with a CAN channel.
-The data types contain the bit-timing settings for Classic CAN operation mode as well as for CAN FD operation mode.
+The data types contain the bit-timing settings for Classical CAN operation mode as well as for CAN FD operation mode.
 The bit-timing settings are based upon the CAN clock frequency of the CAN controller.
 The formula to calculate the bit-rate from frequency-based bit-timing settings is given by [(1)](#formula-1)
 and to calculated the sample-point within a bit by [(2)](#formula-2).
 
-Additionally CAN API V3 provides the data type [can_speed_t](#can_speed_t) (**C/C++**) respectively [struct Speed](#struct_speed) (**Swift**) for the data transmission speed (bit-rate in [bit/s]) and the sample-point in Classic CAN operation mode as well as in CAN FD operation mode.
+Additionally CAN API V3 provides the data type [can_speed_t](#can_speed_t) (**C/C++**) respectively [struct Speed](#struct_speed) (**Swift**) for the data transmission speed (bit-rate in [bit/s]) and the sample-point in Classical CAN operation mode as well as in CAN FD operation mode.
 The data transmission speed is a read-only property that cannot be used for adjusting the bit-rate of the CAN controller.
 
 <a id="bitrate_frequency"></a>
@@ -148,10 +148,10 @@ In other words, SJW defines how much the bit timing can be adjusted to accommoda
 Field **sam** (number of samples) determines how many times the CAN controller samples the bus to determine the bit's value during each bit time.
 It can be set to either single (1 sample per bit) or triple (3 samples per bit) sampling.
 Triple sampling is more robust in noisy environments but requires more processing resources.
-It depends on the used CAN controller if triple sampling is sopported.
+It depends on the used CAN controller if triple sampling is supported.
 
 <a id="bitrate_index"></a>
-Field **index** (C/C++ only) determines an index to the [table with predefined bit-timings](#bit-timing-table) (Classic CAN only).
+Field **index** (C/C++ only) determines an index to the [table with predefined bit-timings](#bit-timing-table) (Classical CAN only).
 The index to the bit-timing table must be given as a negative value,
 or 0 for the bit-rate of 1 MBit/s.
 
@@ -202,7 +202,7 @@ The CAN controller SJA1000 is running at 8.0 MHz.
 
 #### SYNTAX FOR BIT-RATE STRINGS USED BY CAN API V3 UTILITIES
 
-##### Classic CAN:
+##### Classical CAN:
     f_clock_mhz=<frequency-in-MHz>,nom_brp=<brp>,nom_tseg1=<tseg1>,nom_tseg2=<tseg2>,nom_sjw=<sjw>,nom_sam=<sam>
 ##### CAN FD:
     f_clock_mhz=<frequency-in-MHz>,nom_brp=<brp>,nom_tseg1=<tseg1>,nom_tseg2=<tseg2>,nom_sjw=<sjw>,data_brp=<brp>,data_tseg1=<tseg1>,data_tseg2=<tseg2>,data_sjw=<sjw>

@@ -49,15 +49,15 @@ The method [ProbeChannel()](#probechannel) behaves exactly like the C function.
 
 ### RETURN VALUE
 
-Upon successful completion, the C function and the C++ method return 0. On error, a negative value will be returned (see [errors](#errors)).
+Upon successful completion, the C function and the C++ method will return 0. On error, a negative value will be returned (see [errors](#errors)).
 
-Upon successful completion, the Swift method returns the availibility state. On error, it will be `Nil`.
+Upon successful completion, the Swift method will return the availibility state. On error, it will be `Nil`.
 
-In case of an error, the Swift method throws an exception with a corresponding error code as exception object (see [errors](#errors)).
+In case of an error, the Swift method will throw an exception with a corresponding error code as exception object (see [errors](#errors)).
 
 ### ERRORS
 
-Under the following conditions, [can_test()](#can_test) respectively [ProbeChannel()](#probechannel) fail and return the appropriated error code:
+Under the following conditions, [can_test()](#can_test) respectively [ProbeChannel()](#probechannel) will fail and return the appropriated error code:
 
 [CANERR_LIBRARY](/reference/error_codes#error_library) - library could not be found \
 [CANERR_ILLPARA](/reference/error_codes#error_illpara) - invalid operation mode \

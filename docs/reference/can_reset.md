@@ -26,17 +26,17 @@ The function [can_reset()](#can_reset) stops any operation of the CAN channel gi
 No CAN communication is possible in this state.
 
 The method [ResetController()](#resetcontroller) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of *InitializeChannel()* from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
-Upon successful completion, the C function and the C++ method return 0. On error, a negative value will be returned (see [errors](#errors)).
+Upon successful completion, the C function and the C++ method will return 0. On error, a negative value will be returned (see [errors](#errors)).
 
-In case of an error, the Swift method throws an exception with a corresponding error code as exception object (see [errors](#errors)).
+In case of an error, the Swift method will throw an exception with a corresponding error code as exception object (see [errors](#errors)).
 
 ### ERRORS
 
-Under the following conditions, [can_reset()](#can_reset) respectively [ResetController()](#resetcontroller) fail and return the appropriated error code:
+Under the following conditions, [can_reset()](#can_reset) respectively [ResetController()](#resetcontroller) will fail and return the appropriated error code:
 
 [CANERR_NOTINIT](/reference/error_codes#error_notinit) - channel not initialized \
 [CANERR_HANDLE](/reference/error_codes#error_handle)   - invalid channel handle \

@@ -28,27 +28,27 @@ The function [can_start()](#can_start) initializes the operation mode and the bi
 and sets its operation state to '[running](/reference/status_register#status_bit_can_stopped)'.
 The CAN communication is now taking place.
 
-The requested [operation mode](/reference/operation_modes#name) is detemined during the initialization of the CAN channel (cf. *can_init()* respectively *InitializeChannel()*).
+The requested [operation mode](/reference/operation_modes#name) is detemined during the initialization of the CAN channel (cf. [*can_init()*](/reference/can_init#can_init) respectively [*InitializeChannel()*](/reference/can_init#initializechannel)).
 The operation mode cannot be changed afterwards.
 
 The requested [bit-rate](/reference/bitrate_settings#name), given by the *bitrate* argument,
-can be specified either by CAN clock based [bit-timig settings](/reference/bitrate_settings#bitrate_frequency) (CAN 2.0 and CAN FD) or
-as [index](/reference/bitrate_settings#bitrate_index) to a table with predefined bit-timings (CAN 2.0 only).
+can be specified either by CAN clock based [bit-timing settings](/reference/bitrate_settings#bitrate_frequency) (CAN 2.0 and CAN FD) or
+as [index](/reference/bitrate_settings#bitrate_index) to a table with predefined bit-timing settings (CAN 2.0 only).
 
 Upon successful completion, all statistical counters ([tx/rx/err/ovfl](/reference/property_ids#property_defines)) are reset.
 
 The method [StartController()](#startcontroller) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of *InitializeChannel()* from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
-Upon successful completion, the C function and the C++ method return 0. On error, a negative value will be returned (see [errors](#errors)).
+Upon successful completion, the C function and the C++ method will return 0. On error, a negative value will be returned (see [errors](#errors)).
 
-In case of an error, the Swift method throws an exception with a corresponding error code as exception object (see [errors](#errors)).
+In case of an error, the Swift method will throw an exception with a corresponding error code as exception object (see [errors](#errors)).
 
 ### ERRORS
 
-Under the following conditions, [can_start()](#can_start) respectively [StartController()](#startcontroller) fail and return the appropriated error code:
+Under the following conditions, [can_start()](#can_start) respectively [StartController()](#startcontroller) will fail and return the appropriated error code:
 
 [CANERR_NOTINIT](/reference/error_codes#error_notinit)   - channel not initialized \
 [CANERR_HANDLE](/reference/error_codes#error_handle)     - invalid channel handle \

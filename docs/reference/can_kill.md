@@ -22,7 +22,7 @@ public func SignalChannel() throws
 
 ### DESCRIPTION
 
-> Some CAN drivers are using waitable objects to realize blocking operations by a call to *WaitForSingleObject()* (Windows) or *pthread_cond_wait()* (POSIX),
+> Some CAN drivers are using waitable objects to realize blocking operations by a call of *WaitForSingleObject()* (Windows) or *pthread_cond_wait()* (POSIX),
 > but these waitable objects are no cancellation points.
 > This means that they cannot be terminated by `SIGINT`.
 
@@ -32,17 +32,17 @@ This can be used to terminate blocking operations in progress (e.g. by means of 
 With the value `CANKILL_ALL` for the *handle* argument, all used CAN channels of an application can be signaled at once.
 
 The method [SignalChannel()](#signalchannel) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of *InitializeChannel()* from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
-Upon successful completion, the C function and the C++ method return 0. On error, a negative value will be returned (see [errors](#errors)).
+Upon successful completion, the C function and the C++ method will return 0. On error, a negative value will be returned (see [errors](#errors)).
 
-In case of an error, the Swift method throws an exception with a corresponding error code as exception object (see [errors](#errors)).
+In case of an error, the Swift method will throw an exception with a corresponding error code as exception object (see [errors](#errors)).
 
 ### ERRORS
 
-Under the following conditions, [can_kill()](#can_kill) respectively [SignalChannel()](#signalchannel) fail and return the appropriated error code:
+Under the following conditions, [can_kill()](#can_kill) respectively [SignalChannel()](#signalchannel) will fail and return the appropriated error code:
 
 [CANERR_NOTINIT](/reference/error_codes#error_notinit) - channel not initialized \
 [CANERR_HANDLE](/reference/error_codes#error_handle)   - invalid channel handle \

@@ -36,19 +36,19 @@ The CAN controller must be in operation state '[running](/reference/status_regis
 The size of the receive queue depends on the used CAN driver.
 
 The method [ReadMessage()](#readmessage) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of *InitializeChannel()* from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
-Upon successful completion, the C function and the C++ method return 0. On error, a negative value will be returned (see [errors](#errors)).
+Upon successful completion, the C function and the C++ method will return 0. On error, a negative value will be returned (see [errors](#errors)).
 
-Upon successful completion, the Swift method returns the read message. On error, it will be `Nil`.
+Upon successful completion, the Swift method will return the read message. On error, it will be `Nil`.
 
-In case of an error, the Swift method throws an exception with a corresponding error code as exception object (see [errors](#errors)).
+In case of an error, the Swift method will throw an exception with a corresponding error code as exception object (see [errors](#errors)).
 
 ### ERRORS
 
-Under the following conditions, [can_read()](#can_read) respectively [ReadMessage()](#readmessage) fail and return the appropriated error code:
+Under the following conditions, [can_read()](#can_read) respectively [ReadMessage()](#readmessage) will fail and return the appropriated error code:
 
 [CANERR_NOTINIT](/reference/error_codes#error_notinit)   - channel not initialized \
 [CANERR_HANDLE](/reference/error_codes#error_handle)     - invalid channel handle \

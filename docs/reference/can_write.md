@@ -22,9 +22,9 @@ public func WriteMessage(message: Message, timeout: UInt16 = 0) throws
 
 ### DESCRIPTION
 
-The function [can_write()](#can_write) transmits a CAN message over the CAN controller associated with the CAN channel given by the *handle* argument.
+The function [can_write()](#can_write) sends a CAN message on the CAN bus via the CAN controller associated with the CAN channel given by the *handle* argument.
 
-The [CAN message](/reference/message_format#can_message_t) to be transmitted, will be given by the variable pointed to by the *message* argument.
+The [CAN message](/reference/message_format#can_message_t) to be send, will be given by the variable pointed to by the *message* argument.
 
 The parameter *timeout* determines the time to wait for the operation to complete:
 - 0 means the function returns immediately,
@@ -37,17 +37,17 @@ and the operation mode flag [MON](/reference/operation_modes#mode_bit_mon) must 
 It depends on the used CAN driver whether the transmission of CAN messages is acknowledged or buffered, or not at all.
 
 The method [WriteMessage()](#writemessage) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of *InitializeChannel()* from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
-Upon successful completion, the C function and the C++ method return 0. On error, a negative value will be returned (see [errors](#errors)).
+Upon successful completion, the C function and the C++ method will return 0. On error, a negative value will be returned (see [errors](#errors)).
 
-In case of an error, the Swift method throws an exception with a corresponding error code as exception object (see [errors](#errors)).
+In case of an error, the Swift method will throw an exception with a corresponding error code as exception object (see [errors](#errors)).
 
 ### ERRORS
 
-Under the following conditions, [can_write()](#can_write) respectively [WriteMessage()](#writemessage) fail and return the appropriated error code:
+Under the following conditions, [can_write()](#can_write) respectively [WriteMessage()](#writemessage) will fail and return the appropriated error code:
 
 [CANERR_NOTINIT](/reference/error_codes#error_notinit) - channel not initialized \
 [CANERR_HANDLE](/reference/error_codes#error_handle)   - invalid channel handle \

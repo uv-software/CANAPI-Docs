@@ -47,13 +47,13 @@ Upon successful completion, the CAN interface repectively its CAN controller is 
 
 ### RETURN VALUE
 
-Upon successful completion, the C function return a channel handle and the C++ function return 0. On error, a negative value will be returned (see [errors](#errors)).
+Upon successful completion, the C function returns a channel handle and the C++ function returns 0. On error, a negative value will be returned (see [errors](#errors)).
 
-In case of an error, the Swift method throws an exception with a corresponding error code as exception object (see [errors](#errors)).
+In case of an error, the Swift method will throw an exception with a corresponding error code as exception object (see [errors](#errors)).
 
 ### ERRORS
 
-Under the following conditions, [can_init()](#can_init) respectively [InitializeChannel()](#initializechannel) fail and return the appropriated error code:
+Under the following conditions, [can_init()](#can_init) respectively [InitializeChannel()](#initializechannel) will fail and return the appropriated error code:
 
 [CANERR_LIBRARY](/reference/error_codes#error_library) - library could not be found \
 [CANERR_YETINIT](/reference/error_codes#error_yetinit) - channel already in use \
