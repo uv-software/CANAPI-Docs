@@ -14,7 +14,7 @@ int can_start(int handle, const can_bitrate_t *bitrate);
 ```C++
 CANAPI_Return_t StartController(const CANAPI_Bitrate_t &bitrate);
 ```
-<a id="func_startcontroller"></a>
+<a id="swift_startcontroller"></a>
 **Swift Method**
 ```Swift
 public func StartController(bitrate: Bitrate) throws

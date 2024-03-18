@@ -14,7 +14,7 @@ int can_exit(int handle);
 ```C++
 CANAPI_Return_t TeardownChannel();
 ```
-<a id="func_teardownchannel"></a>
+<a id="swift_teardownchannel"></a>
 **Swift Method**
 ```Swift
 public func TeardownChannel() throws

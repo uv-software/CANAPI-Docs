@@ -14,7 +14,7 @@ int can_status(int handle, uint8_t *status);
 ```C++
 CANAPI_Return_t GetStatus(CANAPI_Status_t &status);
 ```
-<a id="var_status"></a>
+<a id="swift_status"></a>
 **Swift Property**
 ```Swift
 public var status: Status?

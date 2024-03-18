@@ -17,7 +17,8 @@ CANAPI_Return_t GetProperty(uint16_t param, void *value, uint32_t nbyte);
 
 CANAPI_Return_t SetProperty(uint16_t param, const void *value, uint32_t nbyte)
 ```
-<a id=""></a>
+<a id="swift_getproperty"></a>
+<a id="swift_setproperty"></a>
 **Swift Properties**
 ```Swift
 ...

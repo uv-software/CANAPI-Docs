@@ -14,7 +14,7 @@ int can_read(int handle, can_message_t *message, uint16_t timeout);
 ```C++
 CANAPI_Return_t ReadMessage(CANAPI_Message_t &message, uint16_t timeout = CANREAD_INFINITE);
 ```
-<a id="func_readmessage"></a>
+<a id="swift_readmessage"></a>
 **Swift Method**
 ```Swift
 public func ReadMessage(timeout: UInt16 = blocking) throws -> Message?

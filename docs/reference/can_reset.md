@@ -14,7 +14,7 @@ int can_reset(int handle);
 ```C++
 CANAPI_Return_t ResetController();
 ```
-<a id="func_resetcontroller"></a>
+<a id="swift_resetcontroller"></a>
 **Swift Method**
 ```Swift
 public func ResetController() throws

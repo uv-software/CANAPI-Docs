@@ -14,7 +14,7 @@ int can_kill(int handle);
 ```C++
 CANAPI_Return_t SignalChannel();
 ```
-<a id="func_signalchannel"></a>
+<a id="swift_signalchannel"></a>
 **Swift Method**
 ```Swift
 public func SignalChannel() throws

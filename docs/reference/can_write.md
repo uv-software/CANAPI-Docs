@@ -14,7 +14,7 @@ int can_write(int handle, const can_message_t *message, uint16_t timeout);
 ```C++
 CANAPI_Return_t WriteMessage(const CANAPI_Message_t &message, uint16_t timeout = 0U);
 ```
-<a id="func_writemessage"></a>
+<a id="swift_writemessage"></a>
 **Swift Method**
 ```Swift
 public func WriteMessage(message: Message, timeout: UInt16 = 0) throws

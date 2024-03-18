@@ -22,7 +22,7 @@
  CANAPI_Return_t InitializeChannel(int32_t channel, const CANAPI_OpMode_t &opMode, const void *param = NULL);
 #endif
 ```
-<a id="func_initializechannel"></a>
+<a id="swift_initializechannel"></a>
 **Swift Method**
 ```Swift
 #if (OPTION_CANAPI_LIBRARY != 0)

@@ -17,8 +17,8 @@ CANAPI_Return_t GetBitrate(CANAPI_Bitrate_t &bitrate);
 
 CANAPI_Return_t GetBusSpeed(CANAPI_BusSpeed_t &speed);
 ```
-<a id="var_bitrate"></a>
-<a id="var_speed"></a>
+<a id="swift_bitrate"></a>
+<a id="swift_speed"></a>
 **Swift Properties**
 ```Swift
 public var bitrate: Bitrate?
