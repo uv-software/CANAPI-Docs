@@ -25,7 +25,8 @@ public func StartController(index: CiaIndex) throws
 ### DESCRIPTION
 
 The function [can_start()](#can_start) initializes the operation mode and the bit-rate of the CAN controller associated with the CAN channel given by the *handle* argument
-and sets its operation state to '[running](/reference/status_register#status_bit_can_stopped)'.
+and connects the CAN controller to the CAN bus (*bus on*).
+The operation state of the CAN controller is set to [RUNNING](/reference/status_register#status_bit_can_stopped).
 The CAN communication is now taking place.
 
 The requested [operation mode](/reference/operation_modes#name) is detemined during the initialization of the CAN channel (cf. [can_init()](/reference/can_init#can_init) respectively [InitializeChannel()](/reference/can_init#initializechannel)).

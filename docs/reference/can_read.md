@@ -31,7 +31,7 @@ The parameter *timeout* determines the time to wait for the operation to complet
 - 65535 means blocking operation, and any other
 - timeout value means the time to wait in milliseconds
 
-The CAN controller must be in operation state '[running](/reference/status_register#status_bit_can_stopped)' to read CAN messages.
+The CAN controller must be in operation state [RUNNING](/reference/status_register#status_bit_can_stopped) to read CAN messages.
 
 The size of the receive queue depends on the used CAN driver.
 

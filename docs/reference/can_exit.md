@@ -22,7 +22,7 @@ public func TeardownChannel() throws
 
 ### DESCRIPTION
 
-The function [can_exit()](#can_exit) stops any operation of the CAN channel given by the *handle* argument and sets the operation state of the CAN controller to '[stopped](/reference/status_register#status_bit_can_stopped)' (aka INIT state).
+The function [can_exit()](#can_exit) stops any operation of the CAN channel given by the *handle* argument and sets the operation state of the CAN controller to [STOPPED](/reference/status_register#status_bit_can_stopped) (aka INIT state).
 All allocated resources of that CAN channel will be released.
 The channel handle is invalid after that.
 

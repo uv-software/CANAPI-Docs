@@ -35,7 +35,7 @@
 ### DESCRIPTION
 
 The function [can_init()](#can_init) initializes the CAN interface (hardware and driver) given by the [*library* and ] *channel* argument.
-The operation state of the CAN controller is set to '[stopped](/reference/status_register#status_bit_can_stopped)' (aka INIT state).
+The operation state of the CAN controller is set to [STOPPED](/reference/status_register#status_bit_can_stopped) (aka INIT state).
 No CAN communication is possible in this state.
 
 If the requested [operation mode](/reference/operation_modes#name), given by the *mode* argument, is not supported by the CAN controller, error [CANERR_ILLPARA](/reference/error_codes#error_illpara) will be returned.
