@@ -37,7 +37,7 @@ and the operation mode flag [MON](/reference/operation_modes#mode_bit_mon) must 
 It depends on the used CAN driver whether the transmission of CAN messages is acknowledged or buffered, or not at all.
 
 The method [WriteMessage()](#writemessage) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
@@ -53,7 +53,7 @@ Under the following conditions, [can_write()](#can_write) respectively [WriteMes
 [CANERR_HANDLE](/reference/error_codes#error_handle)   - invalid channel handle \
 [CANERR_NULLPTR](/reference/error_codes#error_nullptr) - null-pointer assignment \
 [CANERR_ILLPARA](/reference/error_codes#error_illpara) - invalid parameter (dlc or flags) \
-[CANERR_OFFLINE](/reference/error_codes#error_online)  - controller not started \
+[CANERR_OFFLINE](/reference/error_codes#error_offline) - controller not started \
 [CANERR_TX_BUSY](/reference/error_codes#error_tx_busy) - transmitter busy \
 [CANERR_QUE_OVR](/reference/error_codes#error_que_ovr) - transmit queue overrun \
 [others](/reference/error_codes#error_vendor)          - vendor-specific error codes

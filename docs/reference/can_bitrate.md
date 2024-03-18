@@ -35,18 +35,18 @@ and the current [bus speed](/reference/bitrate_settings#can_speed_t) in the vari
 Both parameters are optional, that means NULL pointers can be passed as arguments. 
 
 The method [GetBitrate()](#getbitrate) retrieves the bit-rate of a CAN channel
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 The method [GetBusSpeed()](#getbusspeed) retrieves the data transmission speed of a CAN channel
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 The Swift [bitrate](#var_bitrate) property contains the current [bit-rate](/reference/bitrate_settings#struct_bitrate) read from the associated CAN channel.
 It is a read-only property.
-The class instance from which the property is read must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the property is read must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 The Swift [speed](#var_speed) property contains the current [bus speed](reference/bitrate_settings#struct_speed) read from the associated CAN channel.
 It is a read-only property.
-The class instance from which the property is read must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the property is read must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
@@ -60,7 +60,7 @@ Under the following conditions, [can_bitrate()](#can_bitrate) respectively [GetB
 
 [CANERR_NOTINIT](/reference/error_codes#error_notinit)   - channel not initialized \
 [CANERR_HANDLE](/reference/error_codes#error_handle)     - invalid channel handle \
-[CANERR_OFFLINE](/reference/error_codes#error_offlien)   - controller not started \
+[CANERR_OFFLINE](/reference/error_codes#error_offline)   - controller not started \
 [CANERR_BAUDRATE](/reference/error_codes#error_baudrate) - invalid bit-rate settings \
 [CANERR_NOTSUPP](/reference/error_codes#error_notsupp)   - function not supported \
 [others](/reference/error_codes#error_vendor)            - vendor-specific error codes

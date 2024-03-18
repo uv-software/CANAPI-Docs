@@ -79,7 +79,7 @@ public struct Message {
 
 ### DESCRIPTION
 
-The [CAN message](/reference/message_format#can_message_t) data type is used for the reception as well as for the transmission of CAN messages (see [*can_read()*](/reference/can_read#can_read) respectively [*ReadMessage()*](/reference/can_read#readmessage) and [*can_write()*](/reference/can_write#can_write) respectively [*WriteMessage()*](/reference/can_write#writemessage)).
+The [CAN message](/reference/message_format#can_message_t) data type is used for the reception as well as for the transmission of CAN messages (see [can_read()](/reference/can_read#can_read) respectively [ReadMessage()](/reference/can_read#readmessage) and [can_write()](/reference/can_write#can_write) respectively [WriteMessage()](/reference/can_write#writemessage)).
 
 <a id="message_id"></a>
 Field **id** contains the CAN message identifier, either as 11-bit identifier (standard frame) or as 29-bit identifier (extended frame).
@@ -99,7 +99,7 @@ The transmission as well as the reception of CAN FD frames is only possible if t
 <a id="message_timestamp"></a>
 Field **timestamp** contains the time-stamp of a received CAN message.
 It is given as `struct timespec` with field `tv_sec` (elapsed seconds since start of the epoch) and field `tv_nsec` (nanoseconds).
-The timestamp field is not relevant for transmit messages and will be ignored by [*can_write()*](/reference/can_write#can_write) respectively [*WriteMessage()*](/reference/can_write#writemessage).
+The timestamp field is not relevant for transmit messages and will be ignored by [can_write()](/reference/can_write#can_write) respectively [WriteMessage()](/reference/can_write#writemessage).
 
 <a id="message_flag_xtd"></a>
 Flag **xtd** (bit 0) indicates whether the CAN message is a standard frame or an extended frame.

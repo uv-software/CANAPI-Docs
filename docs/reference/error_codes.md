@@ -145,11 +145,11 @@ Error code **-2** (*CANERR_EWRN*)[^1] indicates that the CAN controller has reac
 <a id="error_berr"></a>
 Error code **-3** (*CANERR_BERR*)[^1] indicates that the CAN controller has detected a bus error (e.g. from ECC logic); cf. status bit [BERR](/reference/status_register#status_bit_bus_error).
 
-<a id="error_offline"></a>
-Error code **-9** (*CANERR_OFFLINE*) indicates that the CAN controller is in INIT state and cannot execute the requested operation.
-
 <a id="error_online"></a>
 Error code **-8** (*CANERR_ONLINE*) indicates that the CAN controller is in RUNNING state and cannot execute the requested operation.
+
+<a id="error_offline"></a>
+Error code **-9** (*CANERR_OFFLINE*) indicates that the CAN controller is in INIT state and cannot execute the requested operation.
 
 <a id="error_msg_lst"></a>
 Error code **-10** (*CANERR_MSG_LST*)[^1] indicates that a received CAN message was overwritten before it was read by the CAN controller; cf. status bit [MSG_LST](/reference/status_register#status_bit_message_lost).

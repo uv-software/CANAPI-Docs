@@ -36,7 +36,7 @@ The CAN controller must be in operation state '[running](/reference/status_regis
 The size of the receive queue depends on the used CAN driver.
 
 The method [ReadMessage()](#readmessage) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
@@ -53,7 +53,7 @@ Under the following conditions, [can_read()](#can_read) respectively [ReadMessag
 [CANERR_NOTINIT](/reference/error_codes#error_notinit)   - channel not initialized \
 [CANERR_HANDLE](/reference/error_codes#error_handle)     - invalid channel handle \
 [CANERR_NULLPTR](/reference/error_codes#error_nullptr)   - null-pointer assignment \
-[CANERR_OFFLINE](/reference/error_codes#error_online)    - controller not started \
+[CANERR_OFFLINE](/reference/error_codes#error_offline)   - controller not started \
 [CANERR_RX_EMPTY](/reference/error_codes#error_rx_empty) - message queue empty \
 [CANERR_QUE_OVR](/reference/error_codes#error_que_ovr)   - receive queue overrun \
 [others](/reference/error_codes#error_vendor)            - vendor-specific error codes

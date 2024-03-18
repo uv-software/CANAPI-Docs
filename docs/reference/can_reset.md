@@ -26,7 +26,7 @@ The function [can_reset()](#can_reset) stops any operation of the CAN channel gi
 No CAN communication is possible in this state.
 
 The method [ResetController()](#resetcontroller) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
