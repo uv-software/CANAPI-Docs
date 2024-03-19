@@ -14,7 +14,7 @@ int can_kill(int handle);
 ```C++
 CANAPI_Return_t SignalChannel();
 ```
-<a id="func_signalchannel"></a>
+<a id="swift_signalchannel"></a>
 **Swift Method**
 ```Swift
 public func SignalChannel() throws
@@ -32,7 +32,7 @@ This can be used to terminate blocking operations in progress (e.g. by means of 
 With the value `CANKILL_ALL` for the *handle* argument, all used CAN channels of an application can be signaled at once.
 
 The method [SignalChannel()](#signalchannel) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 

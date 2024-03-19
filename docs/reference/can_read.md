@@ -14,7 +14,7 @@ int can_read(int handle, can_message_t *message, uint16_t timeout);
 ```C++
 CANAPI_Return_t ReadMessage(CANAPI_Message_t &message, uint16_t timeout = CANREAD_INFINITE);
 ```
-<a id="func_readmessage"></a>
+<a id="swift_readmessage"></a>
 **Swift Method**
 ```Swift
 public func ReadMessage(timeout: UInt16 = blocking) throws -> Message?
@@ -31,12 +31,12 @@ The parameter *timeout* determines the time to wait for the operation to complet
 - 65535 means blocking operation, and any other
 - timeout value means the time to wait in milliseconds
 
-The CAN controller must be in operation state '[running](/reference/status_register#status_bit_can_stopped)' to read CAN messages.
+The CAN controller must be in operation state [RUNNING](/reference/status_register#status_bit_can_stopped) to read CAN messages.
 
 The size of the receive queue depends on the used CAN driver.
 
 The method [ReadMessage()](#readmessage) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
@@ -53,7 +53,7 @@ Under the following conditions, [can_read()](#can_read) respectively [ReadMessag
 [CANERR_NOTINIT](/reference/error_codes#error_notinit)   - channel not initialized \
 [CANERR_HANDLE](/reference/error_codes#error_handle)     - invalid channel handle \
 [CANERR_NULLPTR](/reference/error_codes#error_nullptr)   - null-pointer assignment \
-[CANERR_OFFLINE](/reference/error_codes#error_online)    - controller not started \
+[CANERR_OFFLINE](/reference/error_codes#error_offline)   - controller not started \
 [CANERR_RX_EMPTY](/reference/error_codes#error_rx_empty) - message queue empty \
 [CANERR_QUE_OVR](/reference/error_codes#error_que_ovr)   - receive queue overrun \
 [others](/reference/error_codes#error_vendor)            - vendor-specific error codes

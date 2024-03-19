@@ -14,7 +14,7 @@ int can_reset(int handle);
 ```C++
 CANAPI_Return_t ResetController();
 ```
-<a id="func_resetcontroller"></a>
+<a id="swift_resetcontroller"></a>
 **Swift Method**
 ```Swift
 public func ResetController() throws
@@ -22,11 +22,12 @@ public func ResetController() throws
 
 ### DESCRIPTION
 
-The function [can_reset()](#can_reset) stops any operation of the CAN channel given by the *handle* argument and sets the operation state of the CAN controller to '[stopped](/reference/status_register#status_bit_can_stopped)' (aka INIT state).
+The function [can_reset()](#can_reset) disconnects the CAN controller of the CAN channel given by the *handle* argument from the CAN bus (*bus off*).
+The operation state of the CAN controller is set to [STOPPED](/reference/status_register#status_bit_can_stopped) (aka INIT state).
 No CAN communication is possible in this state.
 
 The method [ResetController()](#resetcontroller) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 

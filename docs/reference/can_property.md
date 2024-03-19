@@ -17,7 +17,8 @@ CANAPI_Return_t GetProperty(uint16_t param, void *value, uint32_t nbyte);
 
 CANAPI_Return_t SetProperty(uint16_t param, const void *value, uint32_t nbyte)
 ```
-<a id=""></a>
+<a id="swift_getproperty"></a>
+<a id="swift_setproperty"></a>
 **Swift Properties**
 ```Swift
 ...
@@ -32,10 +33,10 @@ The [id.](/reference/property_ids#property_defines) of the property to read or t
 To read or to write a property value of the CAN API V3 library itself, the value ***-1*** can be given as *handle*.
 
 The method [GetProperty()](#getproperty) retrieves a property value of a CAN channel.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 The method [SetProperty()](#setproperty) modifies a property value of a CAN channel.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 

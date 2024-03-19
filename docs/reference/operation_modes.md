@@ -69,8 +69,8 @@ public struct Mode: OptionSet {
 
 ### DESCRIPTION
 
-The 8-bit wide [operation mode selector](/reference/operation_modes#can_mode_t) is used to determine the operation mode of a CAN channel (see [*can_init()*](/reference/can_init#can_init) respectively [*InitializeChannel()*](/reference/can_init#initializechannel)).
-The operation mode selector is also used to probe if a specific operation mode is supported by the CAN controller associated with a CAN channel (see [*can_test()*](/reference/can_test#can_test) respectively [*ProbeChannel()*](/reference/can_test#probechannel)).
+The 8-bit wide [operation mode selector](/reference/operation_modes#can_mode_t) is used to determine the operation mode of a CAN channel (see [can_init()](/reference/can_init#can_init) respectively [InitializeChannel()](/reference/can_init#initializechannel)).
+The operation mode selector is also used to probe if a specific operation mode is supported by the CAN controller associated with a CAN channel (see [can_test()](/reference/can_test#can_test) respectively [ProbeChannel()](/reference/can_test#probechannel)).
 
 <a id="mode_bit_fdoe"></a>
 **Mode bit 7 (*FDOE*)** enables or disables CAN FD operation mode.
@@ -115,7 +115,7 @@ If the bit is set, CAN messages cannot be sent (the transmitter of the CAN contr
 If cleared, CAN messages can be received as well as transmitted.
 
 It depends on the CAN adapter or on the current version of the CAN API V3 wrapper library if a selected operation mode is supported or not.
-Use function [*can_test()*](/reference/can_test#can_test) respectively method [*ProbeChannel()*](/reference/can_test#probechannel) to probe if a specific operation mode is supported.
+Use function [can_test()](/reference/can_test#can_test) respectively method [ProbeChannel()](/reference/can_test#probechannel) to probe if a specific operation mode is supported.
 
 #### FOOTNOTE
 

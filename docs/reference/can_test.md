@@ -24,7 +24,7 @@
  static CANAPI_Return_t ProbeChannel(int32_t channel, const CANAPI_OpMode_t &opMode, EChannelState &state);
 #endif
 ```
-<a id="func_probechannel"></a>
+<a id="swift_probechannel"></a>
 **Swift Method**
 ```Swift
 #if (OPTION_CANAPI_LIBRARY != 0)

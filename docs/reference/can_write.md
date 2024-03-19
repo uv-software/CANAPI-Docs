@@ -14,7 +14,7 @@ int can_write(int handle, const can_message_t *message, uint16_t timeout);
 ```C++
 CANAPI_Return_t WriteMessage(const CANAPI_Message_t &message, uint16_t timeout = 0U);
 ```
-<a id="func_writemessage"></a>
+<a id="swift_writemessage"></a>
 **Swift Method**
 ```Swift
 public func WriteMessage(message: Message, timeout: UInt16 = 0) throws
@@ -31,13 +31,13 @@ The parameter *timeout* determines the time to wait for the operation to complet
 - 65535 means blocking operation, and any other
 - timeout value means the time to wait in milliseconds
 
-The CAN controller must be in operation state '[running](/reference/status_register#status_bit_can_stopped)'
+The CAN controller must be in operation state [RUNNING](/reference/status_register#status_bit_can_stopped)
 and the operation mode flag [MON](/reference/operation_modes#mode_bit_mon) must be cleared to send CAN messages.
 
 It depends on the used CAN driver whether the transmission of CAN messages is acknowledged or buffered, or not at all.
 
 The method [WriteMessage()](#writemessage) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
@@ -53,7 +53,7 @@ Under the following conditions, [can_write()](#can_write) respectively [WriteMes
 [CANERR_HANDLE](/reference/error_codes#error_handle)   - invalid channel handle \
 [CANERR_NULLPTR](/reference/error_codes#error_nullptr) - null-pointer assignment \
 [CANERR_ILLPARA](/reference/error_codes#error_illpara) - invalid parameter (dlc or flags) \
-[CANERR_OFFLINE](/reference/error_codes#error_online)  - controller not started \
+[CANERR_OFFLINE](/reference/error_codes#error_offline) - controller not started \
 [CANERR_TX_BUSY](/reference/error_codes#error_tx_busy) - transmitter busy \
 [CANERR_QUE_OVR](/reference/error_codes#error_que_ovr) - transmit queue overrun \
 [others](/reference/error_codes#error_vendor)          - vendor-specific error codes

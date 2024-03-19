@@ -14,7 +14,7 @@ int can_start(int handle, const can_bitrate_t *bitrate);
 ```C++
 CANAPI_Return_t StartController(const CANAPI_Bitrate_t &bitrate);
 ```
-<a id="func_startcontroller"></a>
+<a id="swift_startcontroller"></a>
 **Swift Method**
 ```Swift
 public func StartController(bitrate: Bitrate) throws
@@ -25,10 +25,11 @@ public func StartController(index: CiaIndex) throws
 ### DESCRIPTION
 
 The function [can_start()](#can_start) initializes the operation mode and the bit-rate of the CAN controller associated with the CAN channel given by the *handle* argument
-and sets its operation state to '[running](/reference/status_register#status_bit_can_stopped)'.
+and connects the CAN controller to the CAN bus (*bus on*).
+The operation state of the CAN controller is set to [RUNNING](/reference/status_register#status_bit_can_stopped).
 The CAN communication is now taking place.
 
-The requested [operation mode](/reference/operation_modes#name) is detemined during the initialization of the CAN channel (cf. [*can_init()*](/reference/can_init#can_init) respectively [*InitializeChannel()*](/reference/can_init#initializechannel)).
+The requested [operation mode](/reference/operation_modes#name) is detemined during the initialization of the CAN channel (cf. [can_init()](/reference/can_init#can_init) respectively [InitializeChannel()](/reference/can_init#initializechannel)).
 The operation mode cannot be changed afterwards.
 
 The requested [bit-rate](/reference/bitrate_settings#name), given by the *bitrate* argument,
@@ -38,7 +39,7 @@ as [index](/reference/bitrate_settings#bitrate_index) to a table with predefined
 Upon successful completion, all statistical counters ([tx/rx/err/ovfl](/reference/property_ids#property_defines)) are reset.
 
 The method [StartController()](#startcontroller) behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 

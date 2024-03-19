@@ -14,7 +14,7 @@ int can_status(int handle, uint8_t *status);
 ```C++
 CANAPI_Return_t GetStatus(CANAPI_Status_t &status);
 ```
-<a id="var_status"></a>
+<a id="swift_status"></a>
 **Swift Property**
 ```Swift
 public var status: Status?
@@ -26,11 +26,11 @@ The function [can_status()](#can_status) reads the [status register](/reference/
 The parameter *status* is optional, that means a NULL pointer can be passed as argument.
 
 The [GetStatus()](#getstatus) method behaves exactly like the C function.
-The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the method is called must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 The Swift [status](#var_status) property contains the current [status register](/reference/status_register#name) read from the associated CAN channel.
 It is a read-only property.
-The class instance from which the property is read must be associated with a CAN channel by a previous successful call of [*InitializeChannel()*](/reference/can_init#initializechannel) from that instance.
+The class instance from which the property is read must be associated with a CAN channel by a previous successful call of [InitializeChannel()](/reference/can_init#initializechannel) from that instance.
 
 ### RETURN VALUE
 
