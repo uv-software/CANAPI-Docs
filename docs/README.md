@@ -59,13 +59,15 @@ Please note the copyright and license agreements in the appropriated repository.
 
 [CAN API V3 SDK for PCAN-USB Interfaces from PEAK-System](https://github.com/mac-can/PCBUSB-Wrapper)
 
-[macOS® Driver and SDK for USB CAN Interfaces from Kvaser](https://github.com/mac-can/KvaserCAN-Library)
+[macOS® Driver and CAN API V3 SDK for USB CAN Interfaces from Kvaser](https://github.com/mac-can/KvaserCAN-Library)
 
-[macOS® Driver and SDK for TouCAN USB Interfaces from Rusoku](https://github.com/mac-can/RusokuCAN.dylib)
+[macOS® Driver and CAN API V3 SDK for TouCAN USB Interfaces from Rusoku](https://github.com/mac-can/RusokuCAN.dylib)
 
 [CAN API V3 SDK for CAN-over-Serial-Line Interfaces (SLCAN Protocol)](https://github.com/mac-can/SerialCAN)
 
 #### Linux&reg;
+
+[CAN API V3 SDK for PCAN-USB Interfaces from PEAK-System](https://github.com/mac-can/PCBUSB-Wrapper)
 
 [CAN API V3 SDK for CAN-over-Serial-Line Interfaces (SLCAN Protocol)](https://github.com/mac-can/SerialCAN)
 
